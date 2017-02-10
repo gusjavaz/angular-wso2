@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<samlp:AuthnRequest 
+	AssertionConsumerServiceURL="http://localhost:4200/private" 
+	Destination="https://localhost:9443/samlsso" 
+	ForceAuthn="false" 
+	ID="oocedfgopajehebkfabnkacemaiofimgkphijhad" 
+	IsPassive="false" 
+	IssueInstant="2017-02-08T13:47:51.658Z" 
+	ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" 
+	Version="2.0" 
+	xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol">
+	<samlp:Issuer 
+		xmlns:samlp="urn:oasis:names:tc:SAML:2.0:assertion">
+		empleados
+	</samlp:Issuer>
+	<saml2p:NameIDPolicy 
+		AllowCreate="true" 
+		Format="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent" 
+		SPNameQualifier="Issuer" 
+		xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol"/>
+		<saml2p:RequestedAuthnContext 
+			Comparison="exact" 
+			xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol">
+			<saml:AuthnContextClassRef 
+				xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+				urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
+			</saml:AuthnContextClassRef>
+		</saml2p:RequestedAuthnContext>
+	</samlp:AuthnRequest>

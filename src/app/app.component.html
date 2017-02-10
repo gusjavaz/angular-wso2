@@ -1,4 +1,29 @@
-<h1>
-  {{title}}
-</h1>
-<router-outlet></router-outlet>
+<md-toolbar color="primary">
+	<h1>
+		{{title}}
+	</h1>
+</md-toolbar>
+
+
+<md-sidenav-container>
+	<md-sidenav #sidenav mode="side" opened="true">
+		<md-list>
+			<ul>
+				<a href="/public" >Parte Publica</a>
+			</ul>
+			<ul>
+				<a href="https://localhost:9443/oauth2/authorize?response_type=id_token%20token&scope=openid&client_id=34XJYklYI_emrzApzsibcUPkMQ4a&state=af0ifjsldkj&redirect_uri=http%3A%2F%2Flocalhost:4200%2Fprivate&nonce=1" >Parte Privada (openId)</a>
+			</ul>
+			<ul>
+				<a href="https://localhost:9443/samlsso?SAMLRequest=nVRNbxoxFDxTqf8B%2BQ67bEhDrSwRBUVFSisKpIfejPct6%2BC1t35eQv99%2FUEoPRShXp%2FmzTzPjHz%2FcKhldw8GhVY5GfRT0gXFdSHUNifP68feiDyMu%2B%2Ff3SOrZUMnra3UEn62gNZNOxNEMNbtTrXCtgazArMXHJ6XTzmprG1okkjNmaw0WjrM0jRpjNgzC8SvzxyNUMwGcQ%2FHv%2FAfh8ObxAsj6oB%2F1IZDuCEnJZMYWeaznGjNoSi3umEvUMFmV7KN2jEONRO6FPV211TipWJFXMAFQxR7OLHMEVuYK7RM2Zxk6eCul2a9dLQe3NDhHb0d9D%2Fcjn6E5YXRVnMtPwkVXWqNopqhQKpYDUgtp6vJlyea9VO6iSCkn9frRW8JhTDALel%2Bf3M88447VheDQhpMvszYHOXJ2G0dUwnXm%2B7VHOwtNTKGupHACo2eLTmnO%2FFnDf3qKOazhZaC%2F%2FLXdiZS6tepARdkTqxpYxA%2Bn5rZy%2BJ%2BIopeGaC08UagBeVMWS28zreWSVEKMDmJh0TqP4%2FLrnUo8U84veHYWihCf1xfLRxChzudqa4bZgT6QODAfEBh%2Fh%2BaQTJq0nOhqXSmL6GMxGfMVycVFy%2BCOeVexo19v1%2B1KXxZXeGgWBumsNHGxvuSfx4YPUsumTY%2B68r5hzD%2BDQ%3D%3D" >SAML2</a>
+			</ul>
+			<ul>
+				<a href="https://localhost:9443/openidserver?openid.ns=http://specs.openid.net/aut/2.0&openid.claimed_id=https://localhost:9443/openid/&openid.identity=https://localhost:9443/openid/&openid.return_to=http://localhost:4200/private&openid.realm=empleados&openid.assoc_handle=9351486638891667-1&openid.mode=checkid_immediate&openid.ns.ext1=http://openid.net/srv/ax/1.0&openid.ext1.mode=fetch_request&openid.ext1.type.nickname=http://axschema.org/namePerson/first&openid.ext1.type.lastname=http://axschema.org/namePerson/last&openid.ext1.type.email=http://axschema.org/contact/email&openid.ext1.count.email=unlimited&openid.ext1.type.country=http://axschema.org/contact/country/home&openid.ext1.type.dob=http://axschema.org/birthDate&openid.ext1.required=nickname,lastname,email,country,dob,nickname,lastname,email,country,dob" >openId</a>
+			</ul>
+		</md-list>
+	</md-sidenav>
+
+		<router-outlet></router-outlet>
+</md-sidenav-container>
+
+
